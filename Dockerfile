@@ -8,6 +8,8 @@ COPY . .
 
 RUN npm install react-scripts -g
 
-RUN npm install && npm run build
+RUN cd frontend && npm run build
+
+RUN cd frontend && npm install
 
 CMD ["npm", "start", "--", "-p", "80"]
