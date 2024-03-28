@@ -6,10 +6,6 @@ COPY package*.json ./
 
 COPY . .
 
-RUN npm install react-scripts -g
-
-RUN cd frontend && npm run build
-
-RUN cd frontend && npm install
+RUN npm install && npm run build
 
 CMD ["npm", "start", "--", "-p", "80"]
